@@ -8,7 +8,7 @@
   <div style="padding-top:20%; text-align:center;">
   
   <h1><?=  $heading   ?></h1>
-  <p><?=  $massage   ?></p>
+  <p><?=  $message  ?></p>
 
   </div>
     

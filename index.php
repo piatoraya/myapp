@@ -39,9 +39,9 @@ function extracUrl()
     $function   = @$data[1];
     $param      = @$data[2];
 
-    if (!$file || $file == 'login' || $file == 'index') {
-        include_once "controllers/login.php";
-        $a = new Login();
+    if (!$file || $file == 'home' || $file == 'index') {
+        include_once "controllers/home.php";
+        $a = new Home();
         if (!$function) $function = 'index';
         $a-> $function ($param);
         die;
