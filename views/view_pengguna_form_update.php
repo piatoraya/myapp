@@ -35,13 +35,14 @@
                   <select class="custom-select form-select-border" name="id_level" id="id_level"  >
                   <?php 
                   foreach ($level as $val ) {
-                    $selected = " ";
                     if ($val['id'] ==$dataPengguna['id_level']) {
-                      $selected= " selected ";
+                      <option $selected value="$val['id']"> $val['nama_level'] </option>
+                    } else {
+                      <option value="$val['id']"> $val['nama_level'] </option>
                     }
 
                     ?> 
-                    <option $selected value="<?= $val['id'] ?>"><?= $val['nama_level'] ?></option>
+                    
                     <?php 
                   } ?>
                   </select>
