@@ -1,0 +1,7 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine on
+
+  RewriteRule ^((?!assets/).+)$ index.php [L]
+
+  Options -indexes
+</IfModule>
