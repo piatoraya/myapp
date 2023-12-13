@@ -1,12 +1,10 @@
-<div class="small-box bg-warning">
-              <div class="inner">
+<div class="alert alert-info alert-dismissible">
+                  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                  <?php 
+                  foreach ($status as $val)
+                  if ($val['id']==$dataPengguna['id_status']) {?>
+                 
+                    <p><?= $val['nama'] ?> </p>
+                  <?php }?>
               
-                <h3></h3>
-
-                <p>User Registrations</p>
-              </div>
-              <div class="icon">
-                <i class="ion ion-person-add"></i>
-              </div>
-              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
+                </div>

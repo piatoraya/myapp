@@ -15,7 +15,7 @@ class Dashboard extends Sistem
             'pengguna'  => $tmodel ->getAllUser(),
         ];
         $this->view('header', $data);
-        $this->view('view_dashboard');
+        $this->view('view_dashboard', $data);
         $this->view('footer');
         
     }

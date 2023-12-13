@@ -68,8 +68,9 @@ class Pengguna extends Sistem
     $this->loadModel('UserModel');
     $tmodel = new UserModel();
     $this->loadModel('LevelModel');
-  //membuat object level
     $tlevel = new LevelModel();
+    $this->loadModel('StatusModel');
+    $tstatus = new StatusModel();
 
     $dataPengguna = $tmodel->getByID($id);
 
@@ -80,6 +81,7 @@ class Pengguna extends Sistem
       'title' => 'Update Data Pengguna',
       'dataPengguna' => $dataPengguna[0],
       'level' => $tlevel ->getAll(),
+      'status' => $tstatus ->getAll(),
       
     ];
   
@@ -93,7 +95,7 @@ class Pengguna extends Sistem
     $nama = $this->post('nama');
     $email = $this->post('email');
     $password = $this->post('password');
-    $id_level = $this->post('id_$id_level');
+    $id_level = $this->post('id_level');
     $id_status = $this->post('id_status');
     if (!$nama) {
       $_SESSION['error'] = 'Nama Tidak Boleh Kosong !!';

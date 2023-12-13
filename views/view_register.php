@@ -24,7 +24,7 @@
     <div class="card-body">
       <p class="login-box-msg"><?= $description ?></p>
 
-      <form action="<?= App::baseUrl('login/check_user') ?>" method="post">
+      <form action="<?= App::baseUrl('register/check_user') ?>" method="post">
         <div class="input-group mb-3">
           <input type="email" name="email" class="form-control" placeholder="Email">
           <div class="input-group-append">
@@ -41,14 +41,13 @@
             </div>
           </div>
         </div>
-        <div class="row text-end">
+        <div class="row">
           
           <!-- /.col -->
           <div class="col-12">
-            <button type="submit" class="btn btn-primary btn-block toastrDefaultInfo">Sign In</button>
+            <button type="submit" class="btn btn-primary btn-block">Sign In</button>
           </div>
           <!-- /.col -->
-          
         </div>
       </form>
 
@@ -69,6 +68,5 @@
 <script src="assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE App -->
 <script src="assets/dist/js/adminlte.min.js"></script>
-
 </body>
 </html>
